@@ -25,7 +25,9 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+// static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+/* roman numerals */
+static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -33,10 +35,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Conky",    NULL,       NULL,       1 << 8,       1,           -1 },
-	{ "Nitrogen", NULL,       NULL,       0,            1,           -1 },
+	{ "Gimp",		NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",	NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Conky",		NULL,       NULL,       1 << 8,       1,           -1 },
+	{ "Nitrogen",	NULL,       NULL,       0,            1,           -1 },
+	{ "Pcmanfm",	NULL,		NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -96,6 +99,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ControlMask,           XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },

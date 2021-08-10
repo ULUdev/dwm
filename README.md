@@ -9,6 +9,7 @@
 - [`dwm-fullgaps`](https://dwm.suckless.org/patches/fullgaps): add gaps to the tile layout
 - [`dwm-rotatestack`](https://dwm.suckless.org/patches/rotatestack): allow for rotating windows on the stack
 - [`dwm-systray`](https://dwm.suckless.org/patches/systray): add a systray to the bar (disabled)
+- [`dwm-actualfullscreen`](https://dwm.suckless.org/patches/actualfullscreen): actual fullscreen (Mod+Shift+f)
 
 ### Colors
 My version of dwm uses my turn on the [nightfall colorscheme](https://github.com/nghtfall).
